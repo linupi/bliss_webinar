@@ -17,7 +17,7 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.5.11-Linux-x86
     echo "conda activate base" >> ~/.bashrc
 
 RUN wget https://zoom.us/client/latest/zoom_amd64.deb && \
-    dpkg -i zoom_amd64.deb && \
+    dpkg -i zoom_amd64.deb || : && \
     apt-get -f install && \
     rm zoom_amd64.deb && \
     apt-get clean && \
