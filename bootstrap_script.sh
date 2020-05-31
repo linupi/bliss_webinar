@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo -e "\n------------------ bootstrap script --v1----------------"
-cd /bliss_demo
+cd /bliss_webinar
 git fetch
 git reset --hard origin/master
 cd ../bliss
 git fetch
-git reset --hard origin/user_training
+git reset --hard origin/master
 cd ..
 echo "args $@"
-bliss_demo/startup_script.sh $@
+bliss_webinar/startup_script.sh $@
 

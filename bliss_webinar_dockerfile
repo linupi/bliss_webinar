@@ -29,15 +29,14 @@ ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
-RUN git clone https://github.com/linupi/bliss_demo/
-RUN find bliss_demo -name '*.sh' -exec chmod a+x {} +
+RUN git clone https://github.com/linupi/bliss_webinar/
+RUN find bliss_webinar -name '*.sh' -exec chmod a+x {} +
 
 RUN git clone https://gitlab.esrf.fr/bliss/bliss
 
-RUN bliss_demo/bliss/install_script.sh
-
-#COPY bliss_demo bliss_demo
+RUN bliss_webinar/install_script.sh && /
+    bliss_webinar/bliss/install_script.sh
 
 ENTRYPOINT ["/tini", "--"]
-CMD ["/bliss_demo/bootstrap_script.sh"]
+CMD ["/bliss_webinar/bootstrap_script.sh"]
 

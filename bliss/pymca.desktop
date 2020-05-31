@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon=mate-power-statistics
 Icon[C]=mate-power-statistics
-Exec=/bliss_demo/bliss/start_pymca.sh
+Exec=/bliss_webinar/bliss/start_pymca.sh
 Name[C]=pymca
 Name=pymca

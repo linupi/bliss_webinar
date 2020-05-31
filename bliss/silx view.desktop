@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon=mate-power-statistics
 Icon[C]=mate-power-statistics
-Exec=/bliss_demo/bliss/start_silxview.sh
+Exec=/bliss_webinar/bliss/start_silxview.sh
 Name[C]=silx view
 Name=silx view
