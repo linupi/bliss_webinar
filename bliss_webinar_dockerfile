@@ -30,7 +30,9 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
 RUN git clone https://github.com/linupi/bliss_webinar && \
+    cd bliss_webinar && \
     git reset --hard origin/no_vnc && \
+    cd / && \
     find bliss_webinar -name '*.sh' -exec chmod a+x {} +  
 
 RUN git clone https://gitlab.esrf.fr/bliss/bliss
