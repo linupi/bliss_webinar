@@ -30,8 +30,8 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
 RUN git clone https://github.com/linupi/bliss_webinar/ && \
-    ls && \
-    find bliss_webinar -name '*.sh' -exec chmod a+x {} +
+    find bliss_webinar -name '*.sh' -exec chmod a+x {} +  && \
+    ls -l bliss_webinar
 
 RUN git clone https://gitlab.esrf.fr/bliss/bliss
 
