@@ -34,7 +34,7 @@ RUN find bliss_webinar -name '*.sh' -exec chmod a+x {} +
 
 RUN git clone https://gitlab.esrf.fr/bliss/bliss
 
-RUN bliss_webinar/install_script.sh && /
+RUN bliss_webinar/install_script.sh && \
     bliss_webinar/bliss/install_script.sh
 
 ENTRYPOINT ["/tini", "--"]
