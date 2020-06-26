@@ -9,6 +9,6 @@ xauth add :0 MIT-MAGIC-COOKIE-1 $COOKIE
 Xvfb :0 -auth $AUTHFILE -screen 0 1280x720x24 &
 DISPLAY=:0 nohup /etc/X11/Xsession default &
 sleep 2
-DISPLAY=:0 x11vnc -xkb -noxrecord -rfbauth /etc/x11vnc.pass -rfbport 5900 -forever &
+DISPLAY=:0 x11vnc -xkb -noxrecord -rfbauth /etc/x11vnc.pass -rfbport 5900 -forever -shared 
 
 #-noxdamage
